@@ -8,6 +8,7 @@ four baselines with three forecasting models on a strictly chronological hold-ou
 Final project for *Programming for Data Analysis and Database* (Applied AI, MSc),
 topic 58 "Bitcoin Price and Volatility Analysis", cluster 10 "Forecasting & Open Data Analytics".
 Team: Tanirbergenov Meirbek, Nurgozhiyev Aman, Bekzat Ashirbek (group AAI-2606M).
+Repository: <https://github.com/meirshon999/btc-volatility>.
 
 > Research project, not investment or trading advice.
 
