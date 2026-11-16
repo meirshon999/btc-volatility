@@ -1,0 +1,7 @@
+approach,seconds,peak_memory_mb,dataframe_memory_mb,rows,storage_mb,speedup_vs_baseline,memory_vs_baseline_pct
+"CSV, default dtypes (baseline)",0.437046,1100.77,358.143,7823741,378.86,1,100
+"CSV, compact dtypes",0.464493,661.176,208.917,7823741,378.86,0.94091,60.0647
+"CSV, chunked, 2 columns",0.791168,43.0664,,7823741,378.86,0.552406,3.91238
+"Parquet, all columns",0.122773,676.449,216.372,7823519,182.632,3.5598,61.4522
+"Parquet, 2 columns",0.073862,279.883,89.5332,7823519,182.632,5.91707,25.426
+"Parquet, one year (partition)",0.0136175,57.9961,14.5365,525600,11.5843,32.0945,5.26867

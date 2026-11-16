@@ -1,0 +1,22 @@
+model,reference,loss,dm_statistic,p_value,significantly_better
+Seasonal naive,Naive,absolute,1.59021,0.112249,False
+Seasonal naive,Naive,squared,2.72127,0.00666886,False
+Seasonal naive,Naive,qlike,1.92695,0.0544006,False
+Moving average (30d),Naive,absolute,0.934529,0.350361,False
+Moving average (30d),Naive,squared,1.20055,0.230343,False
+Moving average (30d),Naive,qlike,-1.20706,0.227827,False
+Rolling std (30d),Naive,absolute,2.26005,0.0241321,False
+Rolling std (30d),Naive,squared,2.23386,0.0258151,False
+Rolling std (30d),Naive,qlike,-1.50406,0.133028,False
+HAR-RV,Naive,absolute,-4.224,2.72556e-05,True
+HAR-RV,Naive,squared,-3.65057,0.000281644,True
+HAR-RV,Naive,qlike,-7.01538,5.53256e-12,True
+"GARCH(1,1)",Naive,absolute,7.16464,2.02597e-12,False
+"GARCH(1,1)",Naive,squared,4.18305,3.25144e-05,False
+"GARCH(1,1)",Naive,qlike,-2.56408,0.0105576,True
+LightGBM,Naive,absolute,-7.63906,7.41445e-14,True
+LightGBM,Naive,squared,-6.35277,3.8612e-10,True
+LightGBM,Naive,qlike,-8.37719,3.07763e-16,True
+"GARCH(1,1)",Rolling std (30d),absolute,6.75119,3.13594e-11,False
+"GARCH(1,1)",Rolling std (30d),squared,2.23532,0.0257185,False
+"GARCH(1,1)",Rolling std (30d),qlike,-1.50738,0.132177,False

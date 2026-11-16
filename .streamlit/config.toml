@@ -1,0 +1,20 @@
+# Light and dark themes in the colours of the charts; Streamlit follows the system setting
+# and the viewer can switch in the menu (Settings -> Theme).
+[theme.light]
+primaryColor = "#2a78d6"
+backgroundColor = "#fcfcfb"
+secondaryBackgroundColor = "#f3f2ee"
+textColor = "#0b0b0b"
+
+[theme.dark]
+primaryColor = "#3987e5"
+backgroundColor = "#1a1a19"
+secondaryBackgroundColor = "#242423"
+textColor = "#ffffff"
+
+[server]
+headless = true
+address = "localhost"
+
+[browser]
+gatherUsageStats = false

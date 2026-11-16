@@ -1,0 +1,12 @@
+{
+  "seasonal_strength": 0.337513,
+  "weekday_seasonal_effect_log": {
+    "Mon": 0.0981,
+    "Tue": 0.084,
+    "Wed": 0.1002,
+    "Thu": 0.0647,
+    "Fri": 0.0908,
+    "Sat": -0.2844,
+    "Sun": -0.1552
+  }
+}

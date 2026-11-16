@@ -1,0 +1,4 @@
+,adf_statistic,adf_p_value,kpss_statistic,kpss_p_value,conclusion
+log price,-2.43328155010673,0.1325623853194437,7.664356851030843,0.01,non-stationary (unit root)
+daily log return,-41.72349718035274,0.0,0.26381503752858176,0.1,stationary
+log realised volatility,-4.552468409789023,0.0001578930412084789,3.9950053137007333,0.01,tests disagree: mean-reverting but persistent (long memory)

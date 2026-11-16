@@ -1,0 +1,8 @@
+date,model,forecast_vol,lower,upper
+2026-11-16,Naive,3.82272,,
+2026-11-16,Seasonal naive,2.44487,,
+2026-11-16,Moving average (30d),1.95026,,
+2026-11-16,Rolling std (30d),2.31776,,
+2026-11-16,HAR-RV,3.16714,,
+2026-11-16,"GARCH(1,1)",3.25441,,
+2026-11-16,LightGBM,3.55987,2.40706,4.35357

@@ -1,0 +1,4 @@
+task,pandas_seconds,sql_seconds,pandas_peak_mb,sql_peak_mb,sql_slower_x,results_match
+yearly summary (GROUP BY + HAVING),0.0019833,0.002649,0.0816536,0.00861645,1.33565,True
+30-day rolling mean (window),0.0002339,0.0127402,0.12805,1.04745,54.4686,True
+intraday profile (LAG + GROUP BY),0.0130973,0.197196,15.127,0.0192089,15.0562,True

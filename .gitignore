@@ -1,0 +1,21 @@
+# environment
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# large or re-creatable data (see README: how to get the dataset)
+data/raw/*
+!data/raw/.gitkeep
+data/parquet/
+data/processed/
+data/external/
+data/btc.db
+models/
+reports/pipeline_state.json
+
+# local settings
+.streamlit/secrets.toml
+.idea/
+.claude/
+.vscode/

@@ -1,0 +1,16 @@
+{
+  "first_timestamp": "2012-01-01 00:01:00",
+  "last_timestamp": "2026-11-15 23:59:00",
+  "rows": 7823519,
+  "expected_minutes": 7823519,
+  "missing_minutes": 0,
+  "coverage_pct": 100.0,
+  "duplicate_timestamps": 0,
+  "nan_values": 0,
+  "non_positive_prices": 0,
+  "invalid_candles": 0,
+  "extreme_moves": 96,
+  "spikes": 11,
+  "recommended_model_start": "2017-01-01",
+  "configured_model_start": "2017-01-01"
+}

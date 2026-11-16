@@ -1,0 +1,5 @@
+hypothesis,test,statistic,p_value,effect,reject_h0_at_5pct
+H1: volatility is lower on weekends,Mann-Whitney U (one-sided),943963,2.85667e-42,median weekend 2.17 % vs weekday 2.83 %,True
+H2: volatility clusters (squared returns are autocorrelated),"Ljung-Box, 10 lags",119.593,6.11936e-21,for raw returns p = 0.007,True
+H3: a fall today raises tomorrow's volatility (leverage effect),"Spearman, return(t) vs log vol(t+1)",-0.0188979,0.256639,rho = -0.019,False
+H4: Bitcoin volatility moves with stock-market fear (VIX),"Spearman, BTC vol vs VIX",0.00839877,0.673882,"rho by period - 2017-2019: -0.24, 2020-2022: -0.01, 2023-2026: 0.14",False

@@ -1,0 +1,93 @@
+{
+  "storage": [
+    {
+      "approach": "CSV, default dtypes (baseline)",
+      "seconds": 0.437046,
+      "peak_memory_mb": 1100.773438,
+      "dataframe_memory_mb": 358.142567,
+      "rows": 7823741,
+      "storage_mb": 378.859636,
+      "speedup_vs_baseline": 1.0,
+      "memory_vs_baseline_pct": 100.0
+    },
+    {
+      "approach": "CSV, compact dtypes",
+      "seconds": 0.464493,
+      "peak_memory_mb": 661.175781,
+      "dataframe_memory_mb": 208.91655,
+      "rows": 7823741,
+      "storage_mb": 378.859636,
+      "speedup_vs_baseline": 0.94091,
+      "memory_vs_baseline_pct": 60.064656
+    },
+    {
+      "approach": "CSV, chunked, 2 columns",
+      "seconds": 0.791168,
+      "peak_memory_mb": 43.066406,
+      "dataframe_memory_mb": null,
+      "rows": 7823741,
+      "storage_mb": 378.859636,
+      "speedup_vs_baseline": 0.552406,
+      "memory_vs_baseline_pct": 3.912377
+    },
+    {
+      "approach": "Parquet, all columns",
+      "seconds": 0.122773,
+      "peak_memory_mb": 676.449219,
+      "dataframe_memory_mb": 216.371768,
+      "rows": 7823519,
+      "storage_mb": 182.631941,
+      "speedup_vs_baseline": 3.5598,
+      "memory_vs_baseline_pct": 61.452175
+    },
+    {
+      "approach": "Parquet, 2 columns",
+      "seconds": 0.073862,
+      "peak_memory_mb": 279.882812,
+      "dataframe_memory_mb": 89.533195,
+      "rows": 7823519,
+      "storage_mb": 182.631941,
+      "speedup_vs_baseline": 5.917066,
+      "memory_vs_baseline_pct": 25.426014
+    },
+    {
+      "approach": "Parquet, one year (partition)",
+      "seconds": 0.013617,
+      "peak_memory_mb": 57.996094,
+      "dataframe_memory_mb": 14.536469,
+      "rows": 525600,
+      "storage_mb": 11.584296,
+      "speedup_vs_baseline": 32.094459,
+      "memory_vs_baseline_pct": 5.268668
+    }
+  ],
+  "engines": [
+    {
+      "task": "yearly summary (GROUP BY + HAVING)",
+      "pandas_seconds": 0.001983,
+      "sql_seconds": 0.002649,
+      "pandas_peak_mb": 0.081654,
+      "sql_peak_mb": 0.008616,
+      "sql_slower_x": 1.335653,
+      "results_match": true
+    },
+    {
+      "task": "30-day rolling mean (window)",
+      "pandas_seconds": 0.000234,
+      "sql_seconds": 0.01274,
+      "pandas_peak_mb": 0.12805,
+      "sql_peak_mb": 1.047449,
+      "sql_slower_x": 54.468582,
+      "results_match": true
+    },
+    {
+      "task": "intraday profile (LAG + GROUP BY)",
+      "pandas_seconds": 0.013097,
+      "sql_seconds": 0.197196,
+      "pandas_peak_mb": 15.127012,
+      "sql_peak_mb": 0.019209,
+      "sql_slower_x": 15.05621,
+      "results_match": true
+    }
+  ]
+}

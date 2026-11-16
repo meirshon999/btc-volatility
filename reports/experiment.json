@@ -1,0 +1,140 @@
+{
+  "train_period": [
+    "2017-01-01",
+    "2024-12-31"
+  ],
+  "test_period": [
+    "2025-01-01",
+    "2026-11-15"
+  ],
+  "train_days": 2922,
+  "test_days": 684,
+  "best_model": "LightGBM",
+  "test_metrics": {
+    "Naive": {
+      "mae": 0.635321,
+      "rmse": 0.885139,
+      "mase": 0.580453,
+      "smape": 31.924763,
+      "qlike": 0.437233
+    },
+    "Seasonal naive": {
+      "mae": 0.687129,
+      "rmse": 1.022819,
+      "mase": 0.627787,
+      "smape": 31.02229,
+      "qlike": 0.635932
+    },
+    "Moving average (30d)": {
+      "mae": 0.659714,
+      "rmse": 0.937158,
+      "mase": 0.60274,
+      "smape": 31.847734,
+      "qlike": 0.388479
+    },
+    "Rolling std (30d)": {
+      "mae": 0.696719,
+      "rmse": 0.979353,
+      "mase": 0.636549,
+      "smape": 32.697786,
+      "qlike": 0.381792
+    },
+    "HAR-RV": {
+      "mae": 0.576168,
+      "rmse": 0.801477,
+      "mase": 0.526409,
+      "smape": 27.894986,
+      "qlike": 0.260685
+    },
+    "GARCH(1,1)": {
+      "mae": 0.828454,
+      "rmse": 1.03358,
+      "mase": 0.756907,
+      "smape": 37.962645,
+      "qlike": 0.351305
+    },
+    "LightGBM": {
+      "mae": 0.48158,
+      "rmse": 0.6763,
+      "mase": 0.43999,
+      "smape": 22.86697,
+      "qlike": 0.181838
+    }
+  },
+  "har_coefficients": {
+    "intercept": 0.083638,
+    "log_vol_lag1": 0.485991,
+    "log_vol_mean_5": 0.210494,
+    "log_vol_mean_22": 0.226673
+  },
+  "garch_params": {
+    "mu": 0.132127,
+    "omega": 0.192807,
+    "alpha[1]": 0.08599,
+    "beta[1]": 0.91401,
+    "nu": 3.243258
+  },
+  "lgbm_best_params": {
+    "num_leaves": 7,
+    "learning_rate": 0.03,
+    "n_estimators": 300
+  },
+  "lgbm_interval": {
+    "level_pct": 80,
+    "coverage_pct": 78.216374,
+    "below_pct": 13.888889,
+    "above_pct": 7.894737,
+    "mean_width": 1.524463
+  },
+  "next_day_forecast": [
+    {
+      "date": "2026-11-16",
+      "model": "Naive",
+      "forecast_vol": 3.822716,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "Seasonal naive",
+      "forecast_vol": 2.444869,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "Moving average (30d)",
+      "forecast_vol": 1.950262,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "Rolling std (30d)",
+      "forecast_vol": 2.317756,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "HAR-RV",
+      "forecast_vol": 3.167142,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "GARCH(1,1)",
+      "forecast_vol": 3.254409,
+      "lower": null,
+      "upper": null
+    },
+    {
+      "date": "2026-11-16",
+      "model": "LightGBM",
+      "forecast_vol": 3.559866,
+      "lower": 2.407062,
+      "upper": 4.35357
+    }
+  ]
+}
