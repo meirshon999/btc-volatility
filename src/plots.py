@@ -402,8 +402,6 @@ def error_by_month(by_month: pd.DataFrame) -> Path:
         if name in by_month:
             ax.plot(x, by_month[name], color=model_color(name), linewidth=1.6, marker="o",
                     markersize=3.2, label=name)
-            ax.annotate(name, (x[-1], by_month[name].iloc[-1]), xytext=(6, 0),
-                        textcoords="offset points", fontsize=8, color=C["text_secondary"], va="center")
     ax.set_ylabel("MAE, percentage points")
     winners = by_month.idxmin(axis=1).value_counts()
     ax.set_title("Forecast error by month (test period)")

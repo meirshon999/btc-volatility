@@ -60,6 +60,15 @@ def file_size_mb(path: Path) -> float:
     return path.stat().st_size / 2**20
 
 
+def _round_float(value: float) -> float | None:
+    """6 decimals, but keep tiny values (e.g. a 5.7e-08 rounding error) instead of zeroing them."""
+    if np.isnan(value):
+        return None
+    if value != 0 and abs(value) < 1e-3:
+        return float(f"{value:.6g}")
+    return round(value, 6)
+
+
 def _to_jsonable(value: Any) -> Any:
     if isinstance(value, dict):
         return {str(k): _to_jsonable(v) for k, v in value.items()}
@@ -69,10 +78,8 @@ def _to_jsonable(value: Any) -> Any:
         return bool(value)
     if isinstance(value, (np.integer,)):
         return int(value)
-    if isinstance(value, (np.floating,)):
-        return None if np.isnan(value) else round(float(value), 6)
-    if isinstance(value, float):
-        return None if np.isnan(value) else round(value, 6)
+    if isinstance(value, (np.floating, float)):
+        return _round_float(float(value))
     if isinstance(value, (pd.Timestamp, datetime, date)):
         return value.isoformat()
     if isinstance(value, Path):
