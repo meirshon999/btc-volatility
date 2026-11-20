@@ -267,21 +267,22 @@ with tabs[0]:
                 text_col, button_col = st.columns([7, 1], vertical_alignment="center")
                 text_col.markdown(
                     ":material/waving_hand: **Start here.** This dashboard answers one question: "
-                    "*how much will Bitcoin's price swing tomorrow?*  \n"
+                    "*how much will Bitcoin's price swing the next day?*  \n"
                     "① Read the forecast below · ② choose a period on the left — it applies to every tab · "
                     "③ explore the tabs from left to right · an unknown word? Open **Glossary** at the top right.")
                 button_col.button("Got it", on_click=lambda: st.session_state.update(intro_closed=True),
                                   width="stretch")
 
-        st.markdown(f"##### Tomorrow, {next_date:%A %d %B %Y}")
+        st.markdown(f"##### Forecast for {next_date:%A %d %B %Y}")
         # word joiner / no-break spaces keep "±$2,325" and "3.6 %" on one line
-        st.markdown(f"## Expected move tomorrow: about **±⁠{vol:.1f} %**, "
+        st.markdown(f"## Expected move: about **±⁠{vol:.1f} %**, "
                     f"≈ **±⁠${price * vol / 100:,.0f}**")
         interval = summary.get("lgbm_interval")
         if interval and pd.notna(upcoming.get("lower")):
             lo, hi = float(upcoming["lower"]), float(upcoming["upper"])
-            st.caption(f"{best} forecast of tomorrow's realised volatility, i.e. the typical size of the day's "
-                       f"price swing (one standard deviation), at a price of ${price:,.0f}. "
+            st.caption(f"{best} forecast of the next day's realised volatility, i.e. the typical size of the day's "
+                       f"price swing (one standard deviation), at the last close of ${price:,.0f} "
+                       f"(data end {daily_all.index[-1]:%d %b %Y}). "
                        f"80 % range: {lo:.1f} – {hi:.1f} % (±${price * lo / 100:,.0f} – ${price * hi / 100:,.0f}); "
                        f"in the test period reality fell inside this range on {interval['coverage_pct']:.0f} % of days.")
 
